@@ -849,6 +849,13 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@ng-bootstrap/ng-bootstrap@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-5.1.1.tgz#513d7e1e2ee3aca233e82b5dc934f48a0417a00b"
+  integrity sha512-k0OGMMxiEalrTo82XY3BNDg0pbJerrvsM79ey41sN6ex0QVMcR23211SAO9mekL8oQqqHcPw9mYN1YgC4jLEJA==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngtools/webpack@8.3.5":
   version "8.3.5"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.5.tgz#700e9bd686334399276fa434122c4bd77d8658d5"
@@ -1148,6 +1155,16 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
   integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
+
+ag-grid-angular@^21.2.1:
+  version "21.2.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-21.2.1.tgz#1aae34c9c7a017ae45477310db4cea777c194f9e"
+  integrity sha512-4bJ7+Gv6AY+MEJACGD16ZKDhQnBrU7wIaXsAwGbShb8jt8xDRhaS9Hf1jnEhY7vaLfYj+zR9vrXGXbTvwTtY2Q==
+
+ag-grid-community@^21.2.1:
+  version "21.2.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-21.2.1.tgz#0d8ab868f2fe8da302e19d14ef99669ef00d3b28"
+  integrity sha512-UmS0j7pOz6SqN++Thg1a82LghW1zKk0k30kpPWxlOzC5On5b8MyKVsYZbGFtpdIHyJlPH3qbkw+PcFWSK168sw==
 
 agent-base@4, agent-base@^4.3.0:
   version "4.3.0"
@@ -1675,6 +1692,11 @@ bonjour@^3.5.0:
     dns-txt "^2.0.2"
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
+
+bootstrap@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
