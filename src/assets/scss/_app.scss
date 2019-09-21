@@ -1,0 +1,30 @@
+
+/* Core variables and mixins
+==========================================================================*/
+
+$fa-font-path: "~font-awesome/fonts";
+
+/* Reset and dependencies
+==========================================================================*/
+
+@import "./custom";
+@import "~bootstrap/scss/bootstrap";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-bootstrap.css";
+
+@import "~font-awesome/scss/font-awesome";
+
+/* Core CSS
+==========================================================================*/
+
+@import "./layout";
+
+/* Utility classes
+==========================================================================*/
+
+@import "./utils";
+
+/* Author's custom styles
+==========================================================================*/
+
+@import "./theme";

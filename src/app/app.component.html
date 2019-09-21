@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <ag-grid-angular
+            class="ag-theme-bootstrap"
+            [rowData]="members$ | async"
+            [columnDefs]="colDef"
+            rowSelection="multiple"
+            domLayout='autoHeight'
+    >
+    </ag-grid-angular>
+</div>

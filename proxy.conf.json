@@ -1,0 +1,29 @@
+{
+  "/members": {
+    "target": "https://staging.officernd.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/members": "/api/v1/organizations/assignment-demo/members"
+    }
+  },
+  "/teams": {
+    "target": "https://staging.officernd.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/teams": "/api/v1/organizations/assignment-demo/teams"
+    }
+  },
+  "/offices": {
+    "target": "https://staging.officernd.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/offices": "/api/v1/organizations/assignment-demo/offices"
+    }
+  }
+}

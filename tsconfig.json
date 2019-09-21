@@ -1,7 +1,18 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "paths": {
+      "@node_modules/*": ["node_modules/*"],
+      "@assets/*": ["src/assets/*"],
+      "@interfaces/*": ["src/app/interfaces/*"],
+      "@enums/*": ["src/app/enums/*"],
+      "@services/*": ["src/app/services/*"],
+      "@http-interceptors/*": ["src/app/http-interceptors/*"],
+      "@column-definitions/*": ["src/app/column-definitions/*"],
+      "@app/*": ["src/app/*"],
+      "@environment/*": ["src/environments/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
