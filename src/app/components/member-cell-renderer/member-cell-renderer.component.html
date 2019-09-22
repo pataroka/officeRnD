@@ -1,0 +1,11 @@
+<div class="d-inline-block">
+    <div class="d-inline mr-2" *ngIf="imgUrl; else icon">
+        <img [src]="imgUrl" alt="Avatar" class="avatar">
+    </div>
+    <span>{{ name }}</span>
+</div>
+<ng-template #icon>
+    <div class="d-inline mr-2">
+        <i class="fa fa-user-alt icon-avatar" aria-hidden="true"></i>
+    </div>
+</ng-template>

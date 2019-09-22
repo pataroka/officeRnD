@@ -10,7 +10,9 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
+
 @import "./custom";
+
 @import "~bootstrap/scss/bootstrap";
 
 @import "~ag-grid-community/src/styles/ag-grid.scss";
@@ -24,8 +26,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 
 /* Utility classes
 ==========================================================================*/
-
-@import "./utils";
 
 /* Author's custom styles
 ==========================================================================*/

@@ -1,44 +1,50 @@
-
-
-$white:  #fff !default;
-$black:  #000 !default;
-$red:    #d9534f !default;
+$white: #fff !default;
+$black: #000 !default;
+$red: #d9534f !default;
 $orange: #f0ad4e !default;
 $yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
+$green: #5cb85c !default;
+$blue: #0275d8 !default;
+$teal: #5bc0de !default;
+$pink: #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #464a4c !default;
-$gray:                      #636c72 !default;
-$gray-light:                #ced4da !default;
-$gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-dark: #464a4c !default;
+$gray: #636c72 !default;
+$gray-light: #ced4da !default;
+$gray-lighter: #eceeef !default;
+$gray-lightest: #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             $blue !default;
-$brand-success:             $green !default;
-$brand-info:                $teal !default;
-$brand-warning:             $orange !default;
-$brand-danger:              $red !default;
-$brand-inverse:             $gray-dark !default;
+$brand-primary: $blue !default;
+$brand-success: $green !default;
+$brand-info: $teal !default;
+$brand-warning: $orange !default;
+$brand-danger: $red !default;
+$brand-inverse: $gray-dark !default;
 
 // Options
 
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          true !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
-$body-bg:       $gray-lighter !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+$body-bg: $gray-lighter !default;
 
-$table-bg-hover:                $gray-lightest !default;
+$table-bg-hover: $gray-lightest !default;
 
 // Ag grid settings
 $header-height: 50px;
-$row-height: 40px;
+$row-height: 70px;
+
+$icon-font-family: "Font Awesome 5 Free";
+$ag-icon-checkbox-checked: "\f14a";
+$ag-icon-checkbox-indeterminate: "\f146";
+$ag-icon-checkbox-unchecked: "\f0c8";
+$ag-icon-asc: "\f0de";
+$ag-icon-desc: "\f0dd";
+$ag-icon-none: "\f0dc";

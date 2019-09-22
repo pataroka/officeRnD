@@ -2,3 +2,67 @@
   Theme - Author's custom styles
 ==========================================================================*/
 
+.ag-theme-bootstrap {
+  padding-left: 16px;
+
+  .ag-body-viewport {
+    background-color: $white;
+  }
+
+  .ag-ltr {
+    .ag-row {
+      border-bottom: 1px solid $gray-lighter;
+
+      &.ag-row-odd,
+      &.ag-row-even {
+        background-color: $white;
+      }
+
+      &.ag-row-selected {
+        background-color: $gray-lighter;
+      }
+
+    }
+
+    .ag-icon {
+      font-size: 16px;
+
+      &.ag-icon-checkbox-checked,
+      &.ag-icon-checkbox-indeterminate,
+      &.ag-icon-asc,
+      &.ag-icon-desc,
+      &.ag-icon-none {
+        font-weight: 600;
+      }
+
+      &.ag-icon-checkbox-checked,
+      &.ag-icon-checkbox-indeterminate {
+        color: $brand-primary;
+      }
+
+      &.ag-icon-checkbox-unchecked,
+      &.ag-icon-none {
+        color: $gray-light;
+      }
+    }
+
+    .ag-has-focus .ag-cell-focus,
+    .ag-root,
+    .ag-header,
+    .ag-header-cell {
+      border: none !important;
+    }
+
+    .ag-cell,
+    .ag-header-cell {
+    }
+
+    .ag-header-cell {
+      font-weight: 600;
+
+      .ag-header-icon {
+        margin-left: auto;
+      }
+    }
+  }
+}
