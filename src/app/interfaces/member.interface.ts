@@ -10,5 +10,5 @@ export interface MemberInterface {
   startDate: string;
   office: string;
   officeName: string;
-  calculatedStatus: MemberStatus[];
+  calculatedStatus: MemberStatus;
 }

@@ -1,14 +1,4 @@
-// Start with assigning color names to specific hex values.
-/*$white:  #fff !default;
-$black:  #000 !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
-$yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;*/
+
 
 $white:  #fff !default;
 $black:  #000 !default;
@@ -22,9 +12,9 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #292b2c !default;
-$gray:                      #464a4c !default;
-$gray-light:                #636c72 !default;
+$gray-dark:                 #464a4c !default;
+$gray:                      #636c72 !default;
+$gray-light:                #ced4da !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
@@ -37,8 +27,6 @@ $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
 
 // Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:            true !default;
 $enable-shadows:            false !default;
@@ -47,18 +35,10 @@ $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
-
-//$enable-rounded:            true !default;
-//$enable-shadows:            false !default;
-//$enable-gradients:          false !default;
-//$enable-transitions:        true !default;
-//$enable-hover-media-query:  false !default;
-//$enable-grid-classes:       true !default;
-//$enable-print-styles:       true !default;
-
-//$body-bg:     $white !default;
 $body-bg:       $gray-lighter !default;
-//$body-bg:       rgba($gray-lightest, 1) !default;
 
 $table-bg-hover:                $gray-lightest !default;
-//$table-bg-hover:                rgba($black,.075) !default;
+
+// Ag grid settings
+$header-height: 50px;
+$row-height: 40px;

@@ -8,6 +8,7 @@
       "@interfaces/*": ["src/app/interfaces/*"],
       "@enums/*": ["src/app/enums/*"],
       "@services/*": ["src/app/services/*"],
+      "@components/*": ["src/app/components/*"],
       "@http-interceptors/*": ["src/app/http-interceptors/*"],
       "@column-definitions/*": ["src/app/column-definitions/*"],
       "@app/*": ["src/app/*"],

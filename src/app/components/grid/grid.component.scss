@@ -1,0 +1,92 @@
+@import "assets/scss/custom";
+
+.container-fluid {
+  height: 100%;
+  width: 1024px;
+  margin: 0 auto;
+
+  .grid-container {
+    background-color: $white;
+    padding: 16px 0;
+    height: calc(100% - 88px);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+
+    .form-inline {
+      padding: 0 16px;
+      margin-bottom: 16px;
+
+      .btn-filter {
+        border-color: $gray-light;
+        color: $gray;
+
+        &.btn-toggle {
+          &.active {
+            background-color: $brand-info;
+            color: $white;
+          }
+        }
+      }
+
+      .btn-select {
+        width: 200px;
+        text-align: start;
+
+        .select-text {
+          width: 160px;
+          justify-content: space-between;
+        }
+
+        .select-team, .select-location {
+          color: $gray-light;
+        }
+
+        .select-filter-text {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .btn-toolbar {
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+    .status-filter-buttons {
+
+      .btn {
+        color: $gray;
+        border-radius: 0;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &.active {
+          color: $brand-primary;
+          border-bottom: $brand-primary solid 2px;
+
+          .badge {
+            color: $brand-primary;
+          }
+        }
+
+        .badge {
+          color: $gray;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .action-buttons {
+      .btn {
+        width: 120px;
+        border-radius: 0.25rem;
+        margin-right: 16px;
+      }
+    }
+
+  }
+}

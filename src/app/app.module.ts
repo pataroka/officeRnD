@@ -10,10 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgGridModule } from 'ag-grid-angular';
 import { DataService } from '@services/data.service';
+import { GridComponent } from '@components/grid/grid.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        GridComponent
     ],
     imports: [
         BrowserModule,

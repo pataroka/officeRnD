@@ -1,0 +1,112 @@
+<div class="container-fluid">
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group status-filter-buttons" role="group" aria-label="Status filter buttons">
+            <button
+                    type="button"
+                    class="btn"
+                    [ngClass]="activeStatusFilter === null ? 'active' : ''"
+                    (click)="setStatusFilter()"
+            >
+                <span>All</span>
+                <span class="badge">{{ members.length }}</span>
+            </button>
+            <button
+                    type="button"
+                    class="btn"
+                    [ngClass]="activeStatusFilter === memberStatus.LEAD ? 'active' : ''"
+                    (click)="setStatusFilter(memberStatus.LEAD)"
+            >
+                <span>Lead</span>
+                <span class="badge">{{ leadMembers }}</span>
+            </button>
+            <button
+                    type="button"
+                    class="btn"
+                    [ngClass]="activeStatusFilter === memberStatus.DROP_IN ? 'active' : ''"
+                    (click)="setStatusFilter(memberStatus.DROP_IN)"
+
+            >
+                <span>Drop-In</span>
+                <span class="badge">{{ dropInMembers }}</span>
+            </button>
+            <button
+                    type="button"
+                    class="btn"
+                    [ngClass]="activeStatusFilter === memberStatus.ACTIVE ? 'active' : ''"
+                    (click)="setStatusFilter(memberStatus.ACTIVE)"
+            >
+                <span>Active</span>
+                <span class="badge">{{ activeMembers }}</span>
+            </button>
+            <button
+                    type="button"
+                    class="btn"
+                    [ngClass]="activeStatusFilter === memberStatus.FORMER ? 'active' : ''"
+                    (click)="setStatusFilter(memberStatus.FORMER)"
+            >
+                <span>Former</span>
+                <span class="badge">{{ formerMembers }}</span>
+            </button>
+        </div>
+
+        <div class="btn-group action-buttons" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-primary">Add Member</button>
+        </div>
+    </div>
+    <div class="grid-container col">
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-white">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control border-left-0" aria-label="Text filter" (input)="setQuickFilter($event.target.value)">
+            </div>
+            <button
+                    type="button"
+                    class="btn btn-filter btn-toggle mb-2 mr-2"
+                    [ngClass]="filtersActive ? 'active' : ''"
+                    (click)="toggleFilters()"
+            >
+                Filters
+            </button>
+            <div ngbDropdown class="form-group mb-2 mr-2">
+                <button class="btn btn-filter btn-select" id="location" ngbDropdownToggle>
+                    <div class="select-text d-inline-flex">
+                        <div class="select-location mr-2">LOCATION:</div>
+                        <div class="select-filter-text">{{ locationFilter ? locationFilter : 'All' }}</div>
+                    </div>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="location">
+                    <button type="button" ngbDropdownItem (click)="setLocationFilter()">All</button>
+                    <button type="button" *ngFor="let office of offices" ngbDropdownItem (click)="setLocationFilter(office.name)">{{ office.name }}</button>
+                </div>
+            </div>
+            <div ngbDropdown class="form-group mb-2 mr-2">
+                <button class="btn btn-filter btn-select" id="team" ngbDropdownToggle>
+                    <div class="select-text d-inline-flex">
+                        <div class="select-team mr-2">TEAM:</div>
+                        <div class="select-filter-text">{{ teamFilter ? teamFilter : 'All' }}</div>
+                    </div>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="location">
+                    <button type="button" ngbDropdownItem (click)="setTeamFilter()">All</button>
+                    <button type="button" *ngFor="let team of teams" ngbDropdownItem (click)="setTeamFilter(team.name)">{{ team.name }}</button>
+                </div>
+            </div>
+        </div>
+        <ag-grid-angular
+          #agGrid
+          class="ag-theme-bootstrap"
+          [rowData]="members"
+          [columnDefs]="colDef"
+          rowSelection="multiple"
+          [rowMultiSelectWithClick]="true"
+          style="width: 100%; height: calc(100% - 72px);"
+          (gridReady)="onGridReady($event)"
+        >
+        </ag-grid-angular>
+    </div>
+</div>

@@ -2,17 +2,20 @@
 /* Core variables and mixins
 ==========================================================================*/
 
-$fa-font-path: "~font-awesome/fonts";
-
 /* Reset and dependencies
 ==========================================================================*/
 
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 @import "./custom";
 @import "~bootstrap/scss/bootstrap";
-@import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-bootstrap.css";
 
-@import "~font-awesome/scss/font-awesome";
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-bootstrap/sass/ag-theme-bootstrap.scss";
+
 
 /* Core CSS
 ==========================================================================*/
