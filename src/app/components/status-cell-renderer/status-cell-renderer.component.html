@@ -1,0 +1,7 @@
+<ng-container [ngSwitch]="status">
+    <span class="badge badge-success" *ngSwitchCase="memberStatus.ACTIVE">{{status | titlecase}}</span>
+    <span class="badge badge-secondary" *ngSwitchCase="memberStatus.LEAD">{{status | titlecase}}</span>
+    <span class="badge badge-warning" *ngSwitchCase="memberStatus.DROP_IN">{{status | titlecase}}</span>
+    <span class="badge badge-danger" *ngSwitchCase="memberStatus.FORMER">{{status | titlecase}}</span>
+    <span class="badge badge-info" *ngSwitchCase="memberStatus.CONTACT">{{status | titlecase}}</span>
+</ng-container>

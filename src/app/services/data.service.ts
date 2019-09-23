@@ -7,28 +7,36 @@ import { TeamInterface } from '@interfaces/team.interface';
 import { OfficeInterface } from '@interfaces/office.interface';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class DataService {
 
-  private readonly MEMBERS_URL: string = `${environment.apiUrl}/members`;
+    private readonly MEMBERS_URL: string = `${ environment.apiUrl }/members`;
 
-  private readonly TEAMS_URL: string = `${environment.apiUrl}/teams`;
+    private readonly TEAMS_URL: string = `${ environment.apiUrl }/teams`;
 
-  private readonly OFFICES_URL: string = `${environment.apiUrl}/offices`;
+    private readonly OFFICES_URL: string = `${ environment.apiUrl }/offices`;
 
-  public constructor(private http: HttpClient) { }
+    public constructor(private http: HttpClient) {
+    }
 
-  public getMembers(): Observable<MemberInterface[]> {
-    return this.http.get<MemberInterface[]>(this.MEMBERS_URL);
-  }
+    public getMembers(): Observable<MemberInterface[]> {
+        return this.http.get<MemberInterface[]>(this.MEMBERS_URL);
+    }
 
-  public getTeams(): Observable<TeamInterface[]> {
-    return this.http.get<TeamInterface[]>(this.TEAMS_URL);
-  }
+    public getTeams(): Observable<TeamInterface[]> {
+        return this.http.get<TeamInterface[]>(this.TEAMS_URL);
+    }
 
-  public getOffices(): Observable<OfficeInterface[]> {
-    return this.http.get<OfficeInterface[]>(this.OFFICES_URL);
-  }
+    public getOffices(): Observable<OfficeInterface[]> {
+        return this.http.get<OfficeInterface[]>(this.OFFICES_URL);
+    }
 
+    public createMember(formValue: MemberInterface): Observable<MemberInterface[]> {
+        return this.http.post<MemberInterface[]>(this.MEMBERS_URL, formValue);
+    }
+
+    public deleteMember(id: string): Observable<void> {
+        return this.http.delete<void>(`${this.MEMBERS_URL}/${id}`, );
+    }
 }

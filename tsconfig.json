@@ -11,6 +11,7 @@
       "@components/*": ["src/app/components/*"],
       "@http-interceptors/*": ["src/app/http-interceptors/*"],
       "@column-definitions/*": ["src/app/column-definitions/*"],
+      "@utilities/*": ["src/app/utilities/*"],
       "@app/*": ["src/app/*"],
       "@environment/*": ["src/environments/*"]
     },

@@ -66,3 +66,21 @@
     }
   }
 }
+
+.label-required {
+  &::after{
+    content:"*";
+  }
+}
+
+.datepicker {
+  input {
+    border-right: none;
+  }
+
+  button {
+    border-color: $gray-light;
+    border-left: none;
+    font-weight: 500;
+  }
+}

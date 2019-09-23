@@ -15,5 +15,17 @@ body {
   }
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $gray-light !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $gray-light !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $gray-light !important;
+}
 
 

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ICellRendererAngularComp } from '@node_modules/ag-grid-angular';
+import { ICellRendererAngularComp } from 'ag-grid-angular';
 
 @Component({
   selector: 'app-location-cell-renderer',
   templateUrl: './location-cell-renderer.component.html',
   styleUrls: ['./location-cell-renderer.component.scss']
 })
-export class LocationCellRendererComponent implements ICellRendererAngularComp{
+export class LocationCellRendererComponent implements ICellRendererAngularComp {
 
   public location: string;
 

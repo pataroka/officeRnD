@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Delete member(s)</h4>
+</div>
+<div class="modal-body">
+    <p><strong>Are you sure you want to delete the selected member(s)?</strong></p>
+    <p>All information associated to them will be permanently deleted.
+        <span class="text-danger">This operation can not be undone.</span>
+    </p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="activeModal.dismiss()">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-danger" (click)="activeModal.close(true)">Ok</button>
+</div>

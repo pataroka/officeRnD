@@ -50,11 +50,11 @@
         </div>
 
         <div class="btn-group action-buttons" role="group" aria-label="Third group">
-            <button type="button" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-primary">Add Member</button>
+            <button type="button" class="btn btn-danger" (click)="deleteMembers()">Delete</button>
+            <button type="button" class="btn btn-primary" (click)="addMember()">Add Member</button>
         </div>
     </div>
-    <div class="grid-container col">
+    <div class="grid-container col shadow-sm">
         <div class="form-inline">
             <div class="input-group mb-2 mr-2">
                 <div class="input-group-prepend">
@@ -66,14 +66,14 @@
             </div>
             <button
                     type="button"
-                    class="btn btn-filter btn-toggle mb-2 mr-2"
+                    class="btn btn-filter btn-toggle mb-2 mr-2 shadow-sm"
                     [ngClass]="filtersActive ? 'active' : ''"
                     (click)="toggleFilters()"
             >
                 Filters
             </button>
             <div ngbDropdown class="form-group mb-2 mr-2">
-                <button class="btn btn-filter btn-select" id="location" ngbDropdownToggle>
+                <button class="btn btn-filter btn-select shadow-sm" id="location" ngbDropdownToggle>
                     <div class="select-text d-inline-flex">
                         <div class="select-location mr-2">LOCATION:</div>
                         <div class="select-filter-text">{{ locationFilter ? locationFilter : 'All' }}</div>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div ngbDropdown class="form-group mb-2 mr-2">
-                <button class="btn btn-filter btn-select" id="team" ngbDropdownToggle>
+                <button class="btn btn-filter btn-select shadow-sm" id="team" ngbDropdownToggle>
                     <div class="select-text d-inline-flex">
                         <div class="select-team mr-2">TEAM:</div>
                         <div class="select-filter-text">{{ teamFilter ? teamFilter : 'All' }}</div>
@@ -97,6 +97,7 @@
                 </div>
             </div>
         </div>
+        <span class="ml-4"><small><b>{{ filterResults }}</b> results (of total <b>{{ members.length }}</b>)</small></span>
         <ag-grid-angular
           #agGrid
           class="ag-theme-bootstrap"
@@ -106,6 +107,7 @@
           [rowMultiSelectWithClick]="true"
           style="width: 100%; height: calc(100% - 72px);"
           (gridReady)="onGridReady($event)"
+          (modelUpdated)="onDisplayedRowsChange()"
         >
         </ag-grid-angular>
     </div>

@@ -1,6 +1,7 @@
 import { MemberCellRendererComponent } from '@components/member-cell-renderer/member-cell-renderer.component';
 import * as moment from 'moment';
 import { LocationCellRendererComponent } from '@components/location-cell-renderer/location-cell-renderer.component';
+import { StatusCellRendererComponent } from '@components/status-cell-renderer/status-cell-renderer.component';
 
 export const MEMBER_COL_DEF: any[] = [
     {
@@ -21,7 +22,8 @@ export const MEMBER_COL_DEF: any[] = [
     },
     {
         headerName: 'STATUS/LABEL',
-        field: 'calculatedStatus'
+        field: 'calculatedStatus',
+        cellRendererFramework: StatusCellRendererComponent
     },
     {
         headerName: 'CREATED AT',
